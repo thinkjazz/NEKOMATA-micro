@@ -1,4 +1,4 @@
-# vue-youtube
+# vue-crm-beta v1.0
 
 ## Project setup
 ```
