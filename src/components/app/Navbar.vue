@@ -42,7 +42,9 @@ export default {
     window.M.Dropdown.init(this.$refs.dropdown, {
       constrainWidth: true,
       alignment: 'right',
-      coverTrigger: false
+      coverTrigger: false,
+      autoTrigger: true,
+      hover: false
     })
   }
 }
