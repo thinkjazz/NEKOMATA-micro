@@ -37,7 +37,9 @@
 <script>
 export default {
   data: () => ({
-    date: new Date()
+    date: new Date(),
+    interval: null,
+    dropdown: null
   }),
   methods: {
     logout () {
@@ -47,16 +49,19 @@ export default {
     }
   },
   mounted () {
-    setInterval(() => {
+    this.unterval = setInterval(() => {
       this.date = new Date()
     }, 1000)
-    window.M.Dropdown.init(this.$refs.dropdown, {
+    this.dropdown = window.M.Dropdown.init(this.$refs.dropdown, {
       constrainWidth: true,
       alignment: 'right',
       coverTrigger: false,
       autoTrigger: true,
       hover: false
     })
+  },
+  beforeDestroy () {
+    clearInterval(this.interval)
   }
 }
 </script>
