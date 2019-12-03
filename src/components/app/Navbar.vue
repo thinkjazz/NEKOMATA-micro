@@ -6,9 +6,7 @@
           <a href="#" @click.prevent="$emit('click')">
             <i class="material-icons yellow-text">dehaze</i>
           </a>
-          <h5>
-            <span class="yellow-text">12.12.12</span>
-          </h5>
+          <span class="yellow-text">{{date}}</span>
         </div>
 
         <ul class="right hide-on-small-and-down">
@@ -38,6 +36,9 @@
 </template>
 <script>
 export default {
+  data: () => ({
+    date: new Date()
+  }),
   methods: {
     logout () {
       console.log('logout')
@@ -46,6 +47,9 @@ export default {
     }
   },
   mounted () {
+    setInterval(() => {
+      this.date = new Date()
+    }, 1000)
     window.M.Dropdown.init(this.$refs.dropdown, {
       constrainWidth: true,
       alignment: 'right',
