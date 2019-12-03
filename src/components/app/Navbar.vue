@@ -25,7 +25,7 @@
               </li>
               <li class="divider" tabindex="-1"></li>
               <li>
-                <a href="#" class="black-text">
+                <a href="#" class="black-text" @click.prevent="logout">
                   <i class="material-icons">assignment_return</i>Выйти
                 </a>
               </li>
@@ -38,6 +38,13 @@
 </template>
 <script>
 export default {
+  methods: {
+    logout () {
+      console.log('logout')
+      // this.$router.push('/login?message=logout')
+      this.$router.push({ path: 'login', query: { message: 'logout' } })
+    }
+  },
   mounted () {
     window.M.Dropdown.init(this.$refs.dropdown, {
       constrainWidth: true,
