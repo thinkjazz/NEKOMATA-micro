@@ -11,9 +11,9 @@
       </div>
     </main>
     <div class="fixed-action-btn">
-      <a class="btn-floating btn-large yellow" href="#">
+      <router-link class="btn-floating btn-large yellow" to="/record">
         <i class="large material-icons black-text">add</i>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
