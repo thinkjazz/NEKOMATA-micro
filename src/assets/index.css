@@ -202,8 +202,8 @@
     border-radius:50%;
 }
 .btn,  .btn-small {
-    width: 200px;
-    height: 40px;
+    width: 260px; 
+    height: 45px;
     text-decoration: none;
     border-radius:2px;
     color: #263238;
