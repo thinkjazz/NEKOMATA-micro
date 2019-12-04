@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="card-action">
-    <div class = "button-block">
+    <div class="button-block">
       <button
           class="btn waves-effect waves-light auth-submit"
           type="submit"
