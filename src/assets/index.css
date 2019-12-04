@@ -198,7 +198,10 @@
 .button-block {
     text-align: center;
 }
-.btn, .btn-large, .btn-small {
+.btn-large {
+    border-radius:50%;
+}
+.btn,  .btn-small {
     width: 200px;
     height: 40px;
     text-decoration: none;
