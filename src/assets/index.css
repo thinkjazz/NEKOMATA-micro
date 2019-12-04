@@ -187,7 +187,7 @@
     margin: 0 auto
 }
 .sidenav li > a {
-    color:#ffeb3b;
+    color: #fbc106;
     display: block;
     font-size: 19px;
     font-weight: 600;
@@ -195,8 +195,14 @@
     line-height: 48px;
     padding: 0 32px;
 }
+.button-block {
+    text-align: center;
+}
 .btn, .btn-large, .btn-small {
+    width: 200px;
+    height: 40px;
     text-decoration: none;
+    border-radius:2px;
     color: #263238;
     background-color: #ffc107;
     text-align: center;
@@ -212,11 +218,17 @@
     text-decoration: none;
     color: #fff;
     background-color: #263238;
-    text-align: center;
     letter-spacing: .5px;
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
     cursor: pointer;
+}
+.btn:focus, .btn-large:focus, .btn-small:focus {
+ 
+    color: #fff;
+
+    background-color: #ff4b3d;
+   
 }
 .btn-floating.btn-large i {
   
@@ -257,15 +269,7 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-d
     font-size: medium;
    
 }
-.sidenav li > a {
-    color: #fbc106;
-    display: block;
-    font-size: 19px;
-    font-weight: 600;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 32px;
-}
+
 .yellow-text {
     color: #fbc106 !important;
 }
