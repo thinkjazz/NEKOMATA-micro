@@ -50,7 +50,7 @@
     </div>
     <p class="center">
       Нет аккаунта?
-      <router-link to="/register">Зарегистрироваться</router-link>
+      <router-link to="/register">Зарегистрироватьсяgit </router-link>
     </p>
   </div>
 </form>
@@ -66,7 +66,7 @@ export default {
   }),
   validations: {
     email: { email, required },
-    password: { required, minLength: minLength(8) }
+    password: { required, minLength: minLength(6) }
   },
   mounted () {
     if (messages[this.$route.query.message]) {
@@ -79,7 +79,7 @@ export default {
         this.$v.$touch()
         return
       }
-      const formData = {
+      let formData = {
         email: this.email,
         password: this.password
       }
