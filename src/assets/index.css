@@ -282,3 +282,6 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-d
     background-color: #1a1f23 !important;
 }
 
+.username {
+    display: flex;
+}

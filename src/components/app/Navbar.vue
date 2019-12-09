@@ -13,7 +13,7 @@
           <li>
             <a class="dropdown-trigger yellow-text" href="#" data-target="dropdown" ref="dropdown"
             >
-              {{name}}      {{bill}}
+            {{name}}    {{bill}}
               <i class="material-icons right">arrow_drop_down</i>
             </a>
             <ul id="dropdown" class="dropdown-content">
