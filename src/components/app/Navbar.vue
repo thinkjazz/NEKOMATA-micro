@@ -11,8 +11,9 @@
 
         <ul class="right hide-on-small-and-down">
           <li>
-            <a class="dropdown-trigger yellow-text" href="#" data-target="dropdown" ref="dropdown">
-              USER NAME
+            <a class="dropdown-trigger yellow-text" href="#" data-target="dropdown" ref="dropdown"
+            >
+              {{name}}      {{bill}}
               <i class="material-icons right">arrow_drop_down</i>
             </a>
             <ul id="dropdown" class="dropdown-content">
@@ -44,13 +45,20 @@ export default {
   methods: {
     async logout () {
       await this.$store.dispatch('logout')
-      console.log('logout')
       // this.$router.push('/login?message=logout')
       this.$router.push({ path: 'login', query: { message: 'logout' } })
     }
   },
+  computed: {
+    name () {
+      return this.$store.getters.info.name
+    },
+    bill () {
+      return this.$store.getters.info.bill
+    }
+  },
   mounted () {
-    this.unterval = setInterval(() => {
+    this.interval = setInterval(() => {
       this.date = new Date()
     }, 1000)
     this.dropdown = window.M.Dropdown.init(this.$refs.dropdown, {
