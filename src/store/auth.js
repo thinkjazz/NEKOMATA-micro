@@ -1,4 +1,5 @@
 import firebase from './../../node_modules/firebase/app'
+
 export default {
   actions: {
     async login ({ dispatch, commit }, { email, password }) {
@@ -11,11 +12,11 @@ export default {
     },
     async register ({ dispatch, commit }, { email, password, name }) {
       try {
-        await firebase.auth().createUserWithEmailAndPassword(email, password)
-        let uid = await dispatch('getUid')
+        await firebase.auth().createUserWithEmailAndPassword(email, password, name)
+        const uid = await dispatch('getUid')
         await firebase.database().ref(`/users/${uid}/info`).set({
           bill: 10000,
-          name: name
+          name
         })
       } catch (e) {
         commit('setError', e)
@@ -23,11 +24,12 @@ export default {
       }
     },
     getUid () {
-      let user = firebase.auth().currentUser
+      const user = firebase.auth().currentUser
       return user ? user.uid : null
     },
-    async logout () {
+    async logout ({ dispatch, commit }) {
       await firebase.auth().signOut()
+      commit('clearInfo')
     }
   }
 }

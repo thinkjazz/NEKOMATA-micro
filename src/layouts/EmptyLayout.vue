@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import messages from '@/utils/messages'
+import messages from '../utils/messages'
 export default {
   computed: {
     error () {

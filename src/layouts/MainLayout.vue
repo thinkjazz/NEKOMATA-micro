@@ -22,10 +22,15 @@ import Navbar from '../components/app/Navbar'
 import Sidebar from '../components/app/Sidebar'
 
 export default {
-  name: 'MainLayout',
+  name: 'main-layout',
   data: () => ({
     isOpen: true
   }),
+  async mounted () {
+    if (!Object.keys(this.$store.getters.info).length) {
+      await this.$store.dispatch('fetchInfo')
+    }
+  },
   components: {
     Navbar,
     Sidebar

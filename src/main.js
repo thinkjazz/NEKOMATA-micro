@@ -5,11 +5,11 @@ import router from './router'
 import store from './store'
 import dateFilter from './filters/date.filter'
 import messagePlugin from './utils/message.plugin'
-import firebase from '../node_modules/firebase/app'
-import 'firebase/auth'
-import 'firebase/database'
 import './registerServiceWorker'
 import '../node_modules/materialize-css/dist/js/materialize'
+import firebase from '../node_modules/firebase/app'
+import '../node_modules/firebase/auth'
+import '../node_modules/firebase/database'
 
 Vue.config.productionTip = false
 Vue.use(messagePlugin)
@@ -21,8 +21,7 @@ firebase.initializeApp({
   databaseURL: 'https://vuecrm-2e568.firebaseio.com',
   projectId: 'vuecrm-2e568',
   storageBucket: 'vuecrm-2e568.appspot.com',
-  messagingSenderId: '1007134230193',
-  appId: '1:1007134230193:web:5ae1d16df4b7dc0c11c490'
+  messagingSenderId: '1007134230193'
 })
 let app
 firebase.auth().onAuthStateChanged(() => {
