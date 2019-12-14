@@ -19,12 +19,12 @@ Vue.use(Vuelidate)
 Vue.filter('date', dateFilter)
 Vue.component('Loader', Loader)
 firebase.initializeApp({
-  apiKey: 'AIzaSyABRVCmMqILVaMVlGB_Cmf39E0diIphhzI',
+  apiKey: '',
   authDomain: 'vuecrm-2e568.firebaseapp.com',
   databaseURL: 'https://vuecrm-2e568.firebaseio.com',
   projectId: 'vuecrm-2e568',
   storageBucket: 'vuecrm-2e568.appspot.com',
-  messagingSenderId: '1007134230193'
+  messagingSenderId: ''
 })
 let app
 firebase.auth().onAuthStateChanged(() => {
