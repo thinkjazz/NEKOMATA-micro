@@ -13,7 +13,7 @@
           <li>
             <a class="dropdown-trigger yellow-text" href="#" data-target="dropdown" ref="dropdown"
             >
-            {{name}}    {{bill}}
+            {{name}}
               <i class="material-icons right">arrow_drop_down</i>
             </a>
             <ul id="dropdown" class="dropdown-content">
@@ -52,9 +52,6 @@ export default {
   computed: {
     name () {
       return this.$store.getters.info.name
-    },
-    bill () {
-      return this.$store.getters.info.bill
     }
   },
   mounted () {
