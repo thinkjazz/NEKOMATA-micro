@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import dateFilter from './filters/date.filter'
+import currencyFilter from './filters/currency.filter'
 import messagePlugin from './utils/message.plugin'
 import Loader from './components/app/Loader'
 
@@ -17,14 +18,16 @@ Vue.config.productionTip = false
 Vue.use(messagePlugin)
 Vue.use(Vuelidate)
 Vue.filter('date', dateFilter)
+Vue.filter('currency', currencyFilter)
 Vue.component('Loader', Loader)
 firebase.initializeApp({
-  apiKey: '',
+  apiKey: 'AIzaSyABRVCmMqILVaMVlGB_Cmf39E0diIphhzI',
   authDomain: 'vuecrm-2e568.firebaseapp.com',
   databaseURL: 'https://vuecrm-2e568.firebaseio.com',
   projectId: 'vuecrm-2e568',
   storageBucket: 'vuecrm-2e568.appspot.com',
-  messagingSenderId: ''
+  messagingSenderId: '1007134230193',
+  appId: '1:1007134230193:web:5ae1d16df4b7dc0c11c490'
 })
 let app
 firebase.auth().onAuthStateChanged(() => {
