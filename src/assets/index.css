@@ -138,7 +138,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #c5c5c5;
     padding-bottom: 1rem;
     padding-top: 1.5rem
 }
@@ -187,7 +187,7 @@
     margin: 0 auto
 }
 .sidenav li > a {
-    color: #fbc106;
+    color: #ffdd6f;
     display: block;
     font-size: 19px;
     font-weight: 600;
@@ -207,7 +207,7 @@
     text-decoration: none;
     border-radius:2px;
     color: #263238;
-    background-color: #ffc107;
+    background-color: #ffdd6f;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: background-color .2s ease-out;
@@ -235,7 +235,7 @@
 }
 .btn-floating.btn-large i {
   
-    background-color: #ffc107;
+    background-color: #ffdd6f;
 }
 .btn-floating.btn-large:hover i{
   
@@ -258,23 +258,23 @@
     user-select: none;
 }
 [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:before, [type="radio"].with-gap:checked + span:after {
-    border: 2px solid #FFC107;
+    border: 2px solid #ffdd6f;
 }[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
-    background-color: #FFC107;
+    background-color: #ffdd6f;
 }
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #FFC107;
-    -webkit-box-shadow: 0 1px 0 0 #FFC107;
-    box-shadow: 0 1px 0 0 #FFC107;
+    border-bottom: 1px solid #ffdd6f;
+    -webkit-box-shadow: 0 1px 0 0 #ffdd6f;
+    box-shadow: 0 1px 0 0 #ffdd6f;
 }
 input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-default):focus:not([readonly]) + label, input[type=password]:not(.browser-default):focus:not([readonly]) + label, input[type=email]:not(.browser-default):focus:not([readonly]) + label, input[type=url]:not(.browser-default):focus:not([readonly]) + label, input[type=time]:not(.browser-default):focus:not([readonly]) + label, input[type=date]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label, input[type=tel]:not(.browser-default):focus:not([readonly]) + label, input[type=number]:not(.browser-default):focus:not([readonly]) + label, input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #FFC107;
+    color: #ffdd6f;
     font-size: medium;
    
 }
 
 .yellow-text {
-    color: #fbc106 !important;
+    color: #ffdd6f !important;
 }
 
 .blue-grey.darken-4 {
