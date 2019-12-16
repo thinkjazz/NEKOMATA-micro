@@ -1,5 +1,5 @@
 <template>
-     <div class="col s12 m6">
+    <div class="col s12 m6">
         <div>
           <div class="page-subtitle">
             <h4>Создать</h4>
@@ -24,12 +24,12 @@
               <input
                   id="limit"
                   type="number"
-                  v-model="limit"
-                  :class="{invalid: $v.title.$dirty && !$v.title.minValue}"
+                  v-model.number="limit"
+                  :class="{invalid: $v.limit.$dirty && !$v.limit.minValue}"
               >
               <label for="limit">Лимит</label>
               <span
-              v-if="$v.title.$dirty && !$v.title.minValue"
+              v-if="$v.limit.$dirty && !$v.limit.minValue"
               class="helper-text invalid"
               >
               Минимальная величина
@@ -49,16 +49,16 @@ import { required, minValue } from '../../node_modules/vuelidate/lib/validators'
 export default {
   data: () => ({
     title: '',
-    limit: 1
+    limit: 100
   }),
   validations: {
     title: { required },
     limit: { minValue: minValue(100) }
   },
   methods: {
-    submitHandeler () {
+    submitHandler () {
       if (this.$v.$invalid) {
-        return this.$v.touch()
+        return this.$v.$touch()
       }
     }
   }
