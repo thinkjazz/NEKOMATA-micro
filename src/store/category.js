@@ -6,16 +6,6 @@ export default {
         let uid = await dispatch('getUid')
         let categories = await (await (firebase.database().ref('/users/' + uid + '/categories').once('value'))).val() || {}
         return Object.keys(categories).map(key => ({ ...categories[key], id: key }))
-        // Above code makes that below code
-        // let categoryToArrayFromDb = []
-        // Object.keys(categories).forEach(key => {
-        //   categoryToArrayFromDb.push({
-        //     title: categories[key].title,
-        //     limit: categories[key].limit,
-        //     id: key
-        //   })
-        // })
-        // return categoryToArrayFromDb
       } catch (error) {
         commit('setError', error)
         throw error
