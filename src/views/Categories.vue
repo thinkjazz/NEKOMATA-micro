@@ -6,14 +6,15 @@
   <section>
     <Loader v-if="loading" />
     <div class="row" v-else>
-    <CategoryCreate @created="addNewCategory"/>
+    <CategoryCreate
+    @created="addNewCategory"/>
     <CategoryEdit
     v-if="categories.length"
     :categories="categories"
     :key="categories.length + updateCount"
     @updated ="updateCategories"
     />
-    <p v-else class="center">Категории отсутствуют</p>
+    <p v-else class="center">Категории отсутствуютgit</p>
     </div>
   </section>
 </div>
