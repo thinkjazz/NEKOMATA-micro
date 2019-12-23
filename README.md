@@ -1,5 +1,5 @@
-# vue-crm-beta v1.0 
-Welcome to the crmVue wiki!
+# vue crm beta v1.0 
+
  ![](https://i.ibb.co/NFGQ2jK/222.png)
 
  ![](https://i.ibb.co/xshtsf8/32323.png)
