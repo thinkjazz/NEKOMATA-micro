@@ -14,7 +14,7 @@
     :key="categories.length + updateCount"
     @updated ="updateCategories"
     />
-    <p v-else class="center">Категории отсутствуютgit</p>
+    <p v-else class="center">Категории отсутствуют</p>
     </div>
   </section>
 </div>

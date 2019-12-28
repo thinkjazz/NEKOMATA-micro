@@ -5,7 +5,7 @@ export default {
     async createRecord ({ dispatch, commit }, record) {
       try {
         let uid = await dispatch('getUid')
-        await firebase.database().ref('/users/' + uid + '/records').push(record)
+        return await firebase.database().ref('/users/' + uid + '/records').push(record)
       } catch (error) {
         commit('setError', error)
         throw error
@@ -14,7 +14,7 @@ export default {
     async fetchRecords ({ dispatch, commit }) {
       try {
         let uid = await dispatch('getUid')
-        let records = await (await (firebase.database().ref('/users/' + uid + '/records').once('value'))).val() || {}
+        let records = (await firebase.database().ref('/users/' + uid + '/records').once('value')).val() || {}
         return Object.keys(records).map(key => ({ ...records[key], id: key }))
       } catch (error) {
         commit('setError', error)

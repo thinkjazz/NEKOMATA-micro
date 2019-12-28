@@ -26,10 +26,11 @@ export default {
     async fetchInfo ({ dispatch, commit }) {
       try {
         let uid = await dispatch('getUid')
-        let info = await firebase.database().ref('/users/' + uid + '/info').once('value')
-        commit('setInfo', info.val())
+        let info = (await firebase.database().ref('/users/' + uid + '/info').once('value')).val()
+        commit('setInfo', info)
       } catch (error) {
-
+        commit('setError', error)
+        throw error
       }
     }
   },

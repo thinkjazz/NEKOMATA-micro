@@ -3,8 +3,8 @@ export default {
     Vue.prototype.$message = function (html) {
       window.M.toast({ html })
     }
-    Vue.prototype.$error = (html) => {
-      window.M.toast({ html: `[Error]: ${html}` })
+    Vue.prototype.$error = function (html) {
+      window.M.toast({ html: `[Ошибка]: ${html}` })
     }
   }
 }

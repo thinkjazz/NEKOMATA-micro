@@ -10,13 +10,13 @@
       <div v-for="cat of categories" :key="cat.id">
         <p>
           <strong>{{cat.title}}:</strong>
-          {{cat.spend | currency }} из {{cat.limit | currency }}
+          {{cat.spend | currency}} из  {{cat.limit | currency}}
         </p>
         <div class="progress" v-tooltip="cat.tooltip">
           <div
-
-              :class="[cat.progressColor]"
+              class= "determinate"  :class="[cat.progressColor]"
               :style="{width: cat.progressPercent + '%'}"
+
           ></div>
         </div>
       </div>
@@ -38,13 +38,15 @@ export default {
   async mounted () {
     let records = await this.$store.dispatch('fetchRecords')
     let categories = await this.$store.dispatch('fetchCategories')
-    this.categories = categories.map((cat) => {
+
+    this.categories = categories.map(cat => {
       let spend = records
         .filter(r => r.categoryId === cat.id)
         .filter(r => r.type === 'outcome')
         .reduce((total, record) => {
-          total += +record.amount
+          return parseInt(total = total + record.amount)
         }, 0)
+
       let percent = 100 * spend / cat.limit
       let progressPercent = percent > 100 ? 100 : percent
       let progressColor = percent < 60
@@ -53,13 +55,15 @@ export default {
           ? 'yellow'
           : 'red'
       let tooltipValue = cat.limit - spend
-      let tooltip = `${tooltipValue < 0 ? 'Превышен на' : 'Осталовсь'} ${currencyFilter(Math.abs(tooltipValue))}`
+      let tooltip = `${tooltipValue < 0 ? 'Превышен на' : 'Осталось'} ${currencyFilter(Math.abs(tooltipValue))}`
       return {
         ...cat,
         progressPercent,
         progressColor,
         spend,
-        tooltip
+        tooltip,
+        percent
+
       }
     })
     this.loading = false

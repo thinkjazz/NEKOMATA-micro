@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <style lang="scss">
-// @import '../node_modules/materialize-css/dist/css/materialize.min';
-@import "~materialize-css/dist/css/materialize.min";
+@import '../node_modules/materialize-css/dist/css/materialize.min';
+
 @import "assets/index";
 </style>

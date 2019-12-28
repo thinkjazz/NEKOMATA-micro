@@ -9,10 +9,10 @@
       <div class="input-field">
         <select ref="select" v-model="category">
           <option
-            v-for="cat in categories"
-            :key='cat.id'
-            :value='cat.id'
-            >{{cat.title}}</option>
+            v-for="c in categories"
+            :key='c.id'
+            :value='c.id'
+            >{{c.title}}</option>
         </select>
         <label>Выберите категорию</label>
       </div>
@@ -91,7 +91,7 @@ export default {
 
   }),
   validations: {
-    amount: { minValue: (1) },
+    amount: { minValue: minValue(1) },
     description: { required }
   },
   async mounted () {
@@ -117,7 +117,7 @@ export default {
   methods: {
     async handleSubmit () {
       if (this.$v.$invalid) {
-        return this.$v.$touch()
+        this.$v.$touch()
       }
       if (this.canCreateRecord) {
         try {
@@ -141,7 +141,6 @@ export default {
         }
       } else {
         this.$message('Недостаточно средств на счёте' + (this.amount - this.info.bill) + ' ')
-        console.log(minValue)
       }
     }
   },

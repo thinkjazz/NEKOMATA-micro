@@ -8,11 +8,11 @@
             <div class="input-field">
               <select ref="select" v-model="current">
                 <option
-                v-for="category of categories"
-                :key="category.id"
-                :value="category.id"
+                v-for="c of categories"
+                :key="c.id"
+                :value="c.id"
                 >
-                {{category.title}}</option>
+                {{c.title}}</option>
               </select>
               <label>Выберите категорию</label>
             </div>
@@ -73,8 +73,8 @@ export default {
     limit: { minValue: minValue(100) }
   },
   watch: {
-    current (categoryId) {
-      let { title, limit } = this.categories.find(category => category.id === categoryId)
+    current (catId) {
+      let { title, limit } = this.categories.find(c => c.id === catId)
       this.title = title
       this.limit = limit
     }

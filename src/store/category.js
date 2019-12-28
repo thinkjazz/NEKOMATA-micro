@@ -4,7 +4,7 @@ export default {
     async fetchCategories ({ commit, dispatch }) {
       try {
         let uid = await dispatch('getUid')
-        let categories = await (await (firebase.database().ref('/users/' + uid + '/categories').once('value'))).val() || {}
+        let categories = (await firebase.database().ref('/users/' + uid + '/categories').once('value')).val() || {}
         return Object.keys(categories).map(key => ({ ...categories[key], id: key }))
       } catch (error) {
         commit('setError', error)
