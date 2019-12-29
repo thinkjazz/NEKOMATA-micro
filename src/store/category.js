@@ -4,8 +4,18 @@ export default {
     async fetchCategories ({ commit, dispatch }) {
       try {
         let uid = await dispatch('getUid')
-        let categories = (await firebase.database().ref('/users/' + uid + '/categories').once('value')).val() || {}
+        let categories = (await firebase.database().ref('/users/' + uid + '/categories').once('value')).val() || Object.create(null)
         return Object.keys(categories).map(key => ({ ...categories[key], id: key }))
+      } catch (error) {
+        commit('setError', error)
+        throw error
+      }
+    },
+    async fetchCategoryById ({ commit, dispatch }, id) {
+      try {
+        let uid = await dispatch('getUid')
+        let category = (await firebase.database().ref('/users/' + uid + '/categories').child(id).once('value')).val() || Object.create(null)
+        return { ...category, id: id }
       } catch (error) {
         commit('setError', error)
         throw error
