@@ -227,9 +227,9 @@ nav ul a {
     margin: 0 auto
 }
 .sidenav li > a {
-    color: #ffdd6f;
+    color: #cecece;
     display: block;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
     height: 48px;
     line-height: 48px;
@@ -242,8 +242,8 @@ nav ul a {
     border-radius:50%;
 }
 .btn,  .btn-small {
-    width: 260px; 
-    height: 45px;
+    width: auto; 
+    height: 37px;
     text-decoration: none;
     border-radius:2px;
     color: #263238;
@@ -259,8 +259,8 @@ nav ul a {
 }
 .btn:hover, .btn-large:hover, .btn-small:hover {
     text-decoration: none;
-    color: #fff;
-    background-color: #263238;
+    color: #263238;
+    background-color: #face3e;
     letter-spacing: .5px;
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
@@ -268,9 +268,9 @@ nav ul a {
 }
 .btn:focus, .btn-large:focus, .btn-small:focus {
  
-    color: #fff;
+    color: #263238;
 
-    background-color: #ff4b3d;
+    background-color: #face3e;
    
 }
 .btn-floating.btn-large i {
@@ -279,7 +279,7 @@ nav ul a {
 }
 .btn-floating.btn-large:hover i{
   
-    background-color: #263238;
+    background-color: #face3e;
     color: #fff!important;
 }
 [type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
@@ -324,4 +324,14 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-d
 
 .username {
     display: flex;
+}
+
+[class^="mdi-"], .sidenav li > a li > a > [class*="mdi-"], .sidenav li > a > i.material-icons {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 32px 0 0;
+    width: 24px;
+    color: rgb(250, 206, 62
+    );
 }
