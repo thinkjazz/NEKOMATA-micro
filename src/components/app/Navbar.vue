@@ -8,12 +8,16 @@
           </a>
           <span class="yellow-text">{{date | date('datetime')}}</span>
         </div>
+      <div class="navbar-right">  <div class="profile-right">
+ <img src="https://materializecss.com/images/yuna.jpg" alt="" class="circle">
+      <span class="yellow-text"> {{name}}</span>
+     </div>
 
-        <ul class="right hide-on-small-and-down">
+ <ul class="right hide-on-small-and-down">
           <li>
             <a class="dropdown-trigger yellow-text" href="#" data-target="dropdown" ref="dropdown"
             >
-            {{name}}
+
               <i class="material-icons right">arrow_drop_down</i>
             </a>
             <ul id="dropdown" class="dropdown-content">
@@ -32,8 +36,10 @@
           </li>
         </ul>
       </div>
+
+     </div>
     </nav>
-  </div>
+</div>
 </template>
 <script>
 export default {

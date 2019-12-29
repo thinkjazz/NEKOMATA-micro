@@ -70,6 +70,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex: 2 1 300px;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center
@@ -85,8 +86,43 @@ nav ul a {
     font-size: 1rem;
     color: #fff;
     display: block;
-    padding: 0px 40px;
+    padding: -1px 40px;
     cursor: pointer;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+}
+.avatar .collection-item.avatar:not(.circle-clipper)>.circle, .collection .collection-item.avatar :not(.circle-clipper)>.circle {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.collection .collection-item.avatar {
+    min-height: 84px;
+    padding-left: 72px;
+    position: relative;
+}
+.navbar-right {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex: 2 1 300px;
+    justify-content: flex-end;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.profile-right{
+    display: contents;
+    left: 15px;
 }
 .app-content {
     padding-top: 64px;
@@ -159,7 +195,11 @@ nav ul a {
 .currency-line span {
     font-size: 1.5rem
 }
-
+.dropdown-content {
+ 
+    
+    
+}
 .dropdown-content li > a, .dropdown-content li > span {
     font-size: 16px;
     color: #1e1e1e;
@@ -335,3 +375,7 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-d
     color: rgb(250, 206, 62
     );
 }
+ul.right.hide-on-small-and-down {
+    width: auto;
+}
+

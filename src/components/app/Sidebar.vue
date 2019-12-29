@@ -18,16 +18,17 @@
   </ul>
 </template>
 <script>
+import localizeFilter from '../../filters/localize.filter'
 export default {
   props: ['value'],
   data: () => {
     return {
       links: [
-        { title: 'Счет', url: '/', exact: true, icon: 'account_balance' },
-        { title: 'История', url: '/history', icon: 'history' },
-        { title: 'Планирование', url: '/planning', icon: 'insert_chart' },
-        { title: 'Новая запись', url: '/record', icon: 'add_box' },
-        { title: 'Категории', url: '/categories', icon: 'collections' }
+        { title: localizeFilter('Menu_bill'), url: '/', exact: true, icon: 'account_balance' },
+        { title: localizeFilter('Menu_history'), url: '/history', icon: 'history' },
+        { title: localizeFilter('Menu_planning'), url: '/planning', icon: 'insert_chart' },
+        { title: localizeFilter('Menu_new_record'), url: '/record', icon: 'add_box' },
+        { title: localizeFilter('Menu_category'), url: '/categories', icon: 'collections' }
       ]
     }
   }
