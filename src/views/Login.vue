@@ -45,12 +45,12 @@
           type="submit"
       >
         Войти
-        <i class="material-icons right">send</i>
+        <i class="material-icons right">forward</i>
       </button>
     </div>
     <p class="center">
       Нет аккаунта?
-      <router-link to="/register">Зарегистрироватьсяgit </router-link>
+      <router-link to="/register">Регистрация</router-link>
     </p>
   </div>
 </form>

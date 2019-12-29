@@ -15,7 +15,7 @@
       </div>
       <button class="btn waves-effect waves-light" type="submit">
         Обновить
-        <i class="material-icons right">send</i>
+        <i class="material-icons right">details</i>
       </button>
     </form>
   </div>

@@ -63,8 +63,8 @@
             class="btn waves-effect waves-light auth-submit"
             type="submit"
         >
-          Зарегистрироваться
-          <i class="material-icons right">send</i>
+          Регистрация
+          <i class="material-icons right">label</i>
         </button>
       </div>
       <p class="center">
