@@ -38,7 +38,7 @@
 
             <button class="btn waves-effect waves-light" type="submit">
               Создать
-              <i class="material-icons right">send</i>
+              <i class="material-icons right">flash_on</i>
             </button>
           </form>
         </div>
