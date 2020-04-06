@@ -66,7 +66,7 @@
 
         <label for="description">Описание</label>
         <span v-if="$v.description.$dirty && !$v.description.required"
-              class="helper-text invalid">Описание ввели юный джедай</span>
+              class="helper-text invalid">Описание введи юный джедай</span>
       </div>
       <button class="btn waves-effect waves-light" type="submit">
         Создать
