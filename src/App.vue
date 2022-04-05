@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <component :is="layout">
-      <router-view />
-    </component>
-  </div>
+    <div id="app">
+        <component :is="layout">
+            <router-view />
+        </component>
+    </div>
 </template>
 
 <script>
@@ -17,12 +17,13 @@ export default {
     }
   },
   components: {
-    EmptyLayout, MainLayout
+    EmptyLayout,
+    MainLayout
   }
 }
 </script>
 <style lang="scss">
-@import '../node_modules/materialize-css/dist/css/materialize.min';
+@import "../node_modules/materialize-css/dist/css/materialize.min";
 
 @import "assets/index";
 </style>

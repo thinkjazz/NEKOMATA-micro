@@ -1,10 +1,13 @@
-# vue crm beta v1.0 
+#  NEKOMATA serverless micro CMS v1.0.1
  ![](https://i.ibb.co/qkCfKGW/01.png)
  ![](https://i.ibb.co/WKSzR28/02.png)
  ![](https://i.ibb.co/68M648q/1.png)
  ![](https://i.ibb.co/5LTFHch/2.png)
  ![](https://i.ibb.co/6rsCbB9/image.png)
-## Project setup
+
+## Firebase API env VUE_APP_FIXER=YOR_API /.env
+
+### Project setup
 ```
 npm install
 ```

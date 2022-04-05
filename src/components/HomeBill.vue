@@ -1,17 +1,14 @@
 <template>
-<div class="col s12 m6 l4">
-    <div class="card grey lighten-5 bill-card">
-    <div class="card-content black-text">
-        <span class="card-title">Счет в валюте</span>
-        <p
-        v-for="cur of currencies"
-        :key ="cur"
-        class="currency-line">
-        <span>{{ getCurrency(cur) | currency(cur) }}</span>
-        </p>
+    <div class="col s12 m6 l4">
+        <div class="card grey lighten-5 bill-card">
+            <div class="card-content black-text">
+                <span class="card-title">Счет в валюте</span>
+                <p v-for="cur of currencies" :key="cur" class="currency-line">
+                    <span>{{ getCurrency(cur) | currency(cur) }}</span>
+                </p>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
 </template>
 <script>
 export default {
@@ -21,7 +18,10 @@ export default {
   }),
   computed: {
     base () {
-      return this.$store.getters.info.bill / (this.rates['RUB'] / this.rates['EUR'])
+      return (
+        this.$store.getters.info.bill /
+                (this.rates['RUB'] / this.rates['EUR'])
+      )
     }
   },
   methods: {
